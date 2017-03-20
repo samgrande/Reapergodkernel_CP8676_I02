@@ -1,0 +1,562 @@
+101c101,102
+< # CONFIG_RESOURCE_COUNTERS is not set
+---
+> CONFIG_RESOURCE_COUNTERS=y
+> # CONFIG_MEMCG is not set
+127c128
+< CONFIG_HOTPLUG=y
+---
+> # CONFIG_HOTPLUG is not set
+173a175
+> CONFIG_SECCOMP_FILTER=y
+207d208
+< CONFIG_IOSCHED_ROW=y
+209,210d209
+< # CONFIG_DEFAULT_ROW is not set
+< # CONFIG_DEFAULT_NOOP is not set
+211a211
+> # CONFIG_DEFAULT_NOOP is not set
+224,225c224,226
+< # CONFIG_ARCH_MT6753 is not set
+< CONFIG_ARCH_MT6752=y
+---
+> CONFIG_ARCH_MT6753=y
+> # CONFIG_ARCH_MT6752 is not set
+> # CONFIG_ARCH_MT8163 is not set
+247c248
+< CONFIG_SCHED_MC=y
+---
+> # CONFIG_SCHED_MC is not set
+254c255
+< CONFIG_HOTPLUG_CPU=y
+---
+> # CONFIG_HOTPLUG_CPU is not set
+290c291
+< # CONFIG_SECCOMP is not set
+---
+> CONFIG_SECCOMP=y
+300c301
+< CONFIG_BUILD_ARM64_APPENDED_DTB_IMAGE_NAMES="aio_otfp"
+---
+> CONFIG_BUILD_ARM64_APPENDED_DTB_IMAGE_NAMES="CP8676_I02"
+387d387
+< CONFIG_TOI_ZRAM_SUPPORT=y
+399d398
+< CONFIG_LENOVO_PM_LOG=y
+775c774
+< CONFIG_NET_DROP_MONITOR=y
+---
+> # CONFIG_NET_DROP_MONITOR is not set
+797c796
+< # CONFIG_CFG80211_ALLOW_RECONNECT is not set
+---
+> CONFIG_CFG80211_ALLOW_RECONNECT=y
+800a800
+> # CONFIG_RFKILL_REGULATOR is not set
+978d977
+< # CONFIG_TI_ST is not set
+987,988c986,987
+< CONFIG_MTK_PLATFORM="mt6752"
+< CONFIG_ARCH_MTK_PROJECT="aio_otfp"
+---
+> CONFIG_MTK_PLATFORM="mt6735"
+> CONFIG_ARCH_MTK_PROJECT="CP8676_I02"
+990c989,990
+< CONFIG_MTK_CIRQ=y
+---
+> # CONFIG_MTK_CIRQ is not set
+> CONFIG_MTK_SYS_CIRQ=y
+992c992
+< CONFIG_MTK_L2C_SHARE=y
+---
+> # CONFIG_MTK_L2C_SHARE is not set
+999d998
+< #Lenovo-sw zhucc modefied for fuse ----start
+1001d999
+< #Lenovo-sw zhucc modefied for fuse ----end
+1004c1002
+< # CONFIG_MTK_SECURITY_SW_SUPPORT is not set
+---
+> CONFIG_MTK_SECURITY_SW_SUPPORT=y
+1006c1004,1009
+< # CONFIG_HAVE_TRUSTONIC_TEE_SUPPORT is not set
+---
+> CONFIG_HAVE_TRUSTONIC_TEE_SUPPORT=y
+> CONFIG_TRUSTONIC_TEE_SUPPORT=y
+> CONFIG_MOBICORE_DRIVER=y
+> # CONFIG_MOBICORE_DEBUG is not set
+> # CONFIG_MOBICORE_VERBOSE is not set
+> CONFIG_MOBICORE_API=y
+1008c1011
+< CONFIG_MD32_SUPPORT=y
+---
+> # CONFIG_MD32_SUPPORT is not set
+1011,1012c1014
+< # CONFIG_EVDO_DT_SUPPORT is not set
+< # CONFIG_EVDO_DT_VIA_SUPPORT is not set
+---
+> # CONFIG_MTK_C2K_SUPPORT is not set
+1014,1015d1015
+< #Sensor Config 
+< #lenovo-sw molg1 add 20141011 begin
+1017,1018c1017,1020
+< # CONFIG_MTK_AUTO_DETECT_ACCELEROMETER is not set
+< # CONFIG_MTK_AUTO_DETECT_MAGNETOMETER is not set
+---
+> # liuxinyuan add sensor auto detect begin 20150430
+> CONFIG_MTK_AUTO_DETECT_ACCELEROMETER=y
+> CONFIG_MTK_AUTO_DETECT_GYROSCOPE=y
+> CONFIG_MTK_AUTO_DETECT_MAGNETOMETER=y
+1019a1022,1023
+> CONFIG_CUSTOM_KERNEL_HALLSENSOR=y
+> # liuxinyuan end
+1021c1025
+< # CONFIG_CUSTOM_KERNEL_GYROSCOPE  is not set
+---
+> CONFIG_CUSTOM_KERNEL_GYROSCOPE=y
+1025d1028
+< 
+1027,1035d1029
+< #lenovo-sw molg1 add 20141011 end
+< #lenovo.sw START wangsx3 change imgsensor config for AIO
+< CONFIG_CUSTOM_KERNEL_IMGSENSOR="ov13850sunny_mipi_raw ov13850ofilma50_mipi_raw ov5670_mipi_raw ov5670lite_mipi_raw"
+< CONFIG_MTK_CAM_CAL_OV13850SUNNY_SUPPORT=y
+< #lenovo.sw END wangsx3 change imgsensor config for AIO
+< #lenovo jixu modify begin
+< CONFIG_CUSTOM_KERNEL_LCM="nt35595_fhd_dsi_cmd_truly_nt50358"
+< #lenovo jixu modify end
+< 
+1049a1044,1046
+> CONFIG_CUSTOM_KERNEL_IMGSENSOR="ar1335_mipi_raw ar1335_qtech_mipi_raw ov5648_mipi_raw ov5648_sunny_mipi_raw"
+> CONFIG_CUSTOM_KERNEL_CAM_CAL_DRV="ar1335_otp"
+> CONFIG_CUSTOM_KERNEL_LCM="otm1284a_by_cpt_5p5_vdo_hd_8676 otm1284a_tm_tm_5p5_vdo_hd_8676 ili9881_ys_cpt_5p5_vdo_hd_8676 r61318_ld_lg_5p5_vdo_hd_8676 otm1283a_by_lg_5p5_vdo_hd_8676"
+1052c1049
+< CONFIG_CUSTOM_KERNEL_SSW="ssw_generic_v2"
+---
+> CONFIG_CUSTOM_KERNEL_SSW="ssw_single_v2"
+1057a1055
+> # CONFIG_MTK_TC7_FEATURE is not set
+1066,1069d1063
+< CONFIG_MTK_SCHED_CMP=y
+< CONFIG_MTK_SCHED_CMP_TGS=y
+< CONFIG_MTK_SCHED_CMP_TGS_WAKEUP=y
+< # CONFIG_MTK_SCHED_CMP_PACK_SMALL_TASK is not set
+1074,1075d1067
+< # CONFIG_MTK_SCHED_TRACERS is not set
+< # CONFIG_MTK_KERNEL_MARKER is not set
+1077d1068
+< # CONFIG_GENERIC_TRACER is not set
+1094c1085
+< CONFIG_MTK_AEE_POWERKEY_HANG_DETECT=y
+---
+> # CONFIG_MTK_AEE_POWERKEY_HANG_DETECT is not set
+1102,1103c1093,1094
+< CONFIG_MTK_RAM_CONSOLE_SIZE=0x4000
+< CONFIG_MTK_RAM_CONSOLE_ADDR=0xF912c000
+---
+> CONFIG_MTK_RAM_CONSOLE_SIZE=0x3000
+> CONFIG_MTK_RAM_CONSOLE_ADDR=0xF912D000
+1117c1108
+< CONFIG_MTK_ETM=y
+---
+> # CONFIG_MTK_ETM is not set
+1146a1138
+> # CONFIG_MTK_LDVT is not set
+1147a1140
+> # CONFIG_MTK_IRTX_SUPPORT is not set
+1153c1146
+< CONFIG_MTK_ECCCI_CCIF=y
+---
+> # CONFIG_MTK_ECCCI_CCIF is not set
+1156c1149,1150
+< # CONFIG_MTK_NET_CCMNI is not set
+---
+> CONFIG_MTK_NET_CCMNI=y
+> # CONFIG_MTK_IRAT_SUPPORT is not set
+1158,1160c1152,1154
+< CONFIG_MTK_MD1_SUPPORT=6
+< CONFIG_MD1_SIZE=0x5000000
+< CONFIG_MD1_SMEM_SIZE=0x200000
+---
+> # modify by fanli for 8676I01 to config communication in 20150619  6->5
+> CONFIG_MTK_MD1_SUPPORT=5
+> #ended by fanli for 8676I01 to config communication in 20150619  6->5
+1162,1164c1156
+< #Lenovo-sw linyf modify 2015-01-04 13:28 , change for AIO 5M project.
+< #CONFIG_MTK_MD_SBP_CUSTOM_VALUE="1"
+< CONFIG_MTK_MD_SBP_CUSTOM_VALUE=""
+---
+> CONFIG_MTK_MD_SBP_CUSTOM_VALUE="1"
+1166c1158,1160
+< CONFIG_MTK_UMTS_TDD128_MODE=y
+---
+> # modify by fanli for 8676I01 to config communication in 20150619
+> # CONFIG_MTK_UMTS_TDD128_MODE is not set
+> # modify by fanli for 8676I01 to config communication in 20150619
+1170c1164
+< CONFIG_MTK_LTE_SUPPORT=y
+---
+> 
+1175,1176c1169,1170
+< CONFIG_LCM_HEIGHT="1920"
+< CONFIG_LCM_WIDTH="1080"
+---
+> CONFIG_LCM_HEIGHT="1280"
+> CONFIG_LCM_WIDTH="720"
+1185,1186c1179,1180
+< # CONFIG_MTK_NFC is not set
+< # CONFIG_NFC_MT6605 is not set
+---
+> # CONFIG_MTK_NFC=y
+> # CONFIG_NFC_MT6605=y
+1188a1183
+> CONFIG_MTK_CONN_LTE_IDC_SUPPORT=y
+1196c1191
+< CONFIG_MTK_COMBO_CHIP_CONSYS_6752=y
+---
+> # CONFIG_MTK_COMBO_CHIP_CONSYS_6752 is not set
+1198,1201c1193,1194
+< # CONFIG_MTK_COMBO_CHIP_CONSYS_6735 is not set
+< CONFIG_MTK_COMBO_CHIP="CONSYS_6752"
+< CONFIG_MTK_WLAN_CHIP="CONSYS_MT6752"
+< CONFIG_MTK_WLAN_SUPPORT=y
+---
+> CONFIG_MTK_COMBO_CHIP_CONSYS_6735=y
+> CONFIG_MTK_COMBO_CHIP="CONSYS_6735"
+1203c1196
+< CONFIG_MTK_PASSPOINT_R1_SUPPORT=y
+---
+> # CONFIG_MTK_PASSPOINT_R1_SUPPORT is not set
+1221d1213
+< #lenovo  2014-11-10 chenlj2 modify for GPS 
+1232d1223
+< CONFIG_MTK_AP_TO_SCP_I2C=y
+1259d1249
+< #Begin, lenovo-sw mahj2 modify for use ncp1854 at 20141011
+1261d1250
+< #end, lenovo-sw mahj2 modify for use ncp1854 at 20141011
+1266c1255
+< # CONFIG_MTK_BQ24296_SUPPORT is not set
+---
+> CONFIG_MTK_BQ24296_SUPPORT=y
+1269,1286c1258
+< #Begin, lenovo-sw mahj2 add for ncp1854 at 20141011
+< CONFIG_MTK_NCP1854_SUPPORT=y
+< #end, lenovo-sw mahj2 add for ncp1854 at 20141011
+< #lenovo-sw zhangrc2 add for poweroff charging ui at 20141114
+< CONFIG_LENOVO_POWEROFF_CHARGING_UI=y
+< #lenovo-sw zhangrc2 add for poweroff charging ui at 20141114
+< #Begin, lenovo-sw mahj2 add for lenovo charging at 20141024
+< CONFIG_LENOVO_CHARGING_STANDARD_SUPPORT=y
+< #end, lenovo-sw mahj2 add for lenovo charging at 20141024
+< #Begin, lenovo-sw mahj2 add for thermal at 20141028
+< CONFIG_LENOVO_THERMAL_SUPPORT=y
+< #end, lenovo-sw mahj2 add for thermal at 20141028
+< #Begin, lenovo-sw mahj2 add for modify ncp1854 otg bug at 20141121
+< #CONFIG_LENOVO_NCP1854_OTG_SUPPORT is not set
+< #End, lenovo-sw mahj2 add for modify ncp1854 otg bug at 20141121
+< #Begin, lenovo-sw mahj2 add for rtc save timezone at 20141204
+< CONFIG_LENOVO_RTC_SAVE_TIMEZONE_SUPPORT=y
+< #End, lenovo-sw mahj2 add for rtc save timezone at 20141204
+---
+> # CONFIG_MTK_NCP1854_SUPPORT is not set
+1297a1270
+> # CONFIG_MTK_SOUND is not set
+1299d1271
+< #lenovo-sw molg1 add 20141011 begin
+1305d1276
+< CONFIG_MTK_EPL21822=y
+1316,1319c1287
+< CONFIG_MTK_BMA222E_NEW=y
+< # CONFIG_MTK_MPU6050G_NEW is not set
+< # CONFIG_MTK_BMA250 is not set
+< # CONFIG_MTK_MPU6515A is not set
+---
+> # CONFIG_MTK_BMA222E_NEW is not set
+1322a1291
+> # CONFIG_MTK_MPU6515A is not set
+1338c1307,1319
+< # CONFIG_MTK_AKM09911_NEW is not set
+---
+> 
+> CONFIG_MTK_pa12200001=y
+> # CONFIG_MTK_pa12200001_auto=y
+> CONFIG_MTK_AKM09911_AUTO=y
+> CONFIG_MTK_YAS537_AUTO=y
+> # CONFIG_MTK_MPU6880_ACC_NEW is not set
+> # CONFIG_MTK_MPU6880_GYRO_NEW is not set
+> CONFIG_MTK_BMI160_GYRO_AUTO=y
+> CONFIG_MTK_BMI160_ACC_AUTO=y
+> CONFIG_MTK_LSM6DS3GY_AUTO=y
+> CONFIG_MTK_LSM6DS3_AUTO=y
+> 
+> 
+1348,1351d1328
+< #lenovo-sw molg1 add 20141209 begin
+< CONFIG_MTK_AKM09911_AIO=y
+< #lenovo-sw molg1 add 20141209 end
+< #lenovo-sw molg1 add 20141011 end
+1381a1359
+> # CONFIG_MTK_MUSB_QMU_SUPPORT is not set
+1383a1362
+> CONFIG_ION_MTK_FB_HEAP_SUPPORT=y
+1385a1365
+> # CONFIG_MTKPASR is not set
+1396d1375
+< # lenovo jixu disable HDMI
+1398d1376
+< # CONFIG_MTK_INTERNAL_HDMI_SUPPORT is not set
+1400,1401c1378
+< # lenovo jixu disable HDMI
+< CONFIG_CUSTOM_KERNEL_HDMI=""
+---
+> # CONFIG_CUSTOM_KERNEL_HDMI is not set
+1403d1379
+< # CONFIG_MTK_INTERNAL_MHL_SUPPORT is not set
+1412,1414c1388,1389
+< # lenovo-sw youwc1 20141121: close AAL for back light start
+< # CONFIG_MTK_AAL_SUPPORT is not set
+< # lenovo-sw youwc1 20141121: close AAL for back light end
+---
+> #2015.05.18 lijianbin@yulong.com add by lijianbin for lcd aal
+> #CONFIG_MTK_AAL_SUPPORT=y
+1419c1394
+< CONFIG_MTK_LENS_AD5820AF_SUPPORT=y
+---
+> # CONFIG_MTK_LENS_AD5820AF_SUPPORT=y
+1427,1431c1402,1407
+< # CONFIG_MTK_LENS_DW9714AF_SUPPORT is not set
+< #lenovo.sw START wangsx3 add for AIO lens
+< CONFIG_MTK_LENS_DW9761SUNNYAF_SUPPORT=y
+< CONFIG_MTK_LENS_DW9761OFILMA50AF_SUPPORT=y
+< #lenovo.sw END wangsx3 add for AIO lens
+---
+> # start gaoatao@yulong.com modified for s5k3m2 2015 0331
+> #CONFIG_MTK_LENS_DW9714AF_SUPPORT=y
+> CONFIG_MTK_LENS_DW9718AF_SUPPORT=y
+> CONFIG_MTK_LENS_DW97182AF_SUPPORT=y
+> # end gaoatao@yulong.com modified fors5k3m2 2015 0331
+> # CONFIG_MTK_LENS_DW9714A_SUPPORT is not set
+1441,1443c1417
+< # CONFIG_MTK_CAM_CAL_GT24C32A_SUPPORT is not set
+< # CONFIG_MTK_CAM_CAL_BRCC064GWZ_3_SUPPORT is not set
+< # CONFIG_MTK_CAM_CAL_BRCB032GWZ_3_SUPPORT is not set
+---
+> # CONFIG_MTK_EXTMEM is not set
+1450a1425
+> CONFIG_MTK_CONN_MD=y
+1452c1427,1433
+< CONFIG_MTK_IMGSENSOR=y
+---
+> # start gaoatao@yulong.com modified for s5k3m2 2015 0331
+> CONFIG_MTK_IMGSENSOR =y
+> CONFIG_MTK_CAM_CAL =y
+> CONFIG_MTK_FLASHLIGHT=y
+> # end gaoatao@yulong.com modified for s5k3m2 2015 0331
+> # CONFIG_MTK_IMGSENSOR is not set
+> # CONFIG_MTK_CAM_CAL is not set
+1463c1444
+< # CONFIG_MTK_VCOREFS is not set
+---
+> CONFIG_MTK_VCOREFS=y
+1629d1609
+< # CONFIG_TOUCHSCREEN_AUO_PIXCIR is not set
+1631d1610
+< # CONFIG_TOUCHSCREEN_CY8CTMG110 is not set
+1651,1655c1630
+< #[Begin]lenovo-sw,wengjun1 add for aio touchpanel config.2014-10-06
+< CONFIG_TOUCHSCREEN_MTK_GT9XX_AIO=y
+< CONFIG_TOUCHSCREEN_MTK_FHD=y
+< CONFIG_LENOVO_GESTURE_WAKEUP=y
+< CONFIG_LENOVO_READ_FW_ID=y
+---
+> # CONFIG_TOUCHSCREEN_MTK_FHD is not set
+1657,1659c1632,1635
+< #CONFIG_TOUCHSCREEN_MTK_GT9XX_HOTKNOT_SCP=y
+< #[End]lenovo-sw,wengjun1 add for aio touchpanel config.2014-10-06
+< # CONFIG_TOUCHSCREEN_MTK_GT9XX_HOTKNOT is not set
+---
+> # CONFIG_TOUCHSCREEN_MTK_GT9XX_AIO is not set
+> # CONFIG_TOUCHSCREEN_MTK_GT9XX_HOTKNOT_SCP is not set
+> CONFIG_TOUCHSCREEN_MTK_GT9XX_HOTKNOT=y
+> 
+1667a1644
+> # CONFIG_MTK_GT911 is not set
+1690a1668
+> # CONFIG_TOUCHSCREEN_SYNAPTICS is not set
+1696,1697d1673
+< # CONFIG_INPUT_GP2A is not set
+< # CONFIG_INPUT_GPIO_TILT_POLLED is not set
+1708d1683
+< # CONFIG_INPUT_GPIO_ROTARY_ENCODER is not set
+1752d1726
+< # CONFIG_SERIAL_IFX6X60 is not set
+1779d1752
+< # CONFIG_I2C_CBUS_GPIO is not set
+1781d1753
+< # CONFIG_I2C_GPIO is not set
+1805a1778,1779
+> # CONFIG_FINGERPRINT_FPC_FULL_FUNCTION is not set
+> CONFIG_FINGERPRINT_FPC_TEE_FUNCTION=y
+1812d1785
+< # CONFIG_SPI_GPIO is not set
+1814d1786
+< # CONFIG_SPI_OC_TINY is not set
+1853d1824
+< CONFIG_ARCH_REQUIRE_GPIOLIB=y
+1855,1900c1826
+< CONFIG_GPIOLIB=y
+< CONFIG_OF_GPIO=y
+< # CONFIG_DEBUG_GPIO is not set
+< # CONFIG_GPIO_SYSFS is not set
+< 
+< #
+< # Memory mapped GPIO drivers:
+< #
+< # CONFIG_GPIO_GENERIC_PLATFORM is not set
+< # CONFIG_GPIO_TS5500 is not set
+< # CONFIG_GPIO_GRGPIO is not set
+< 
+< #
+< # I2C GPIO expanders:
+< #
+< # CONFIG_GPIO_MAX7300 is not set
+< # CONFIG_GPIO_MAX732X is not set
+< # CONFIG_GPIO_PCA953X is not set
+< # CONFIG_GPIO_PCF857X is not set
+< # CONFIG_GPIO_SX150X is not set
+< # CONFIG_GPIO_ADP5588 is not set
+< # CONFIG_GPIO_ADNP is not set
+< 
+< #
+< # PCI GPIO expanders:
+< #
+< 
+< #
+< # SPI GPIO expanders:
+< #
+< # CONFIG_GPIO_MAX7301 is not set
+< # CONFIG_GPIO_MCP23S08 is not set
+< # CONFIG_GPIO_MC33880 is not set
+< # CONFIG_GPIO_74X164 is not set
+< 
+< #
+< # AC97 GPIO expanders:
+< #
+< 
+< #
+< # MODULbus GPIO expanders:
+< #
+< 
+< #
+< # USB GPIO expanders:
+< #
+---
+> # CONFIG_GPIOLIB is not set
+1916c1842
+< # CONFIG_CHARGER_GPIO is not set
+---
+> # CONFIG_CHARGER_MANAGER is not set
+1921d1846
+< # CONFIG_POWER_RESET_GPIO is not set
+1955d1879
+< # CONFIG_MFD_AAT2870_CORE is not set
+1964d1887
+< # CONFIG_HTC_I2CPLD is not set
+1990d1912
+< # CONFIG_TPS65010 is not set
+1995,1998d1916
+< # CONFIG_MFD_TPS65910 is not set
+< # CONFIG_MFD_TPS65912 is not set
+< # CONFIG_MFD_TPS65912_I2C is not set
+< # CONFIG_MFD_TPS65912_SPI is not set
+2013c1931,1953
+< # CONFIG_REGULATOR is not set
+---
+> CONFIG_REGULATOR=y
+> # CONFIG_REGULATOR_DEBUG is not set
+> # CONFIG_REGULATOR_DUMMY is not set
+> # CONFIG_REGULATOR_FIXED_VOLTAGE is not set
+> # CONFIG_REGULATOR_VIRTUAL_CONSUMER is not set
+> # CONFIG_REGULATOR_USERSPACE_CONSUMER is not set
+> # CONFIG_REGULATOR_AD5398 is not set
+> # CONFIG_REGULATOR_FAN53555 is not set
+> # CONFIG_REGULATOR_ISL6271A is not set
+> # CONFIG_REGULATOR_MAX1586 is not set
+> # CONFIG_REGULATOR_MAX8649 is not set
+> # CONFIG_REGULATOR_MAX8660 is not set
+> # CONFIG_REGULATOR_MAX8952 is not set
+> # CONFIG_REGULATOR_MAX8973 is not set
+> # CONFIG_REGULATOR_LP3971 is not set
+> # CONFIG_REGULATOR_LP3972 is not set
+> # CONFIG_REGULATOR_LP872X is not set
+> # CONFIG_REGULATOR_LP8755 is not set
+> # CONFIG_REGULATOR_TPS51632 is not set
+> # CONFIG_REGULATOR_TPS62360 is not set
+> # CONFIG_REGULATOR_TPS65023 is not set
+> # CONFIG_REGULATOR_TPS6507X is not set
+> # CONFIG_REGULATOR_TPS6524X is not set
+2065d2004
+< # CONFIG_FB_SSD1307 is not set
+2114,2120c2053,2056
+< CONFIG_MT_SND_SOC_V2=y
+< # CONFIG_MT_SND_SOC_V3 is not set
+< # lenovo-sw zhouwl,2014-10-11,add smartpa,begin
+< #CONFIG_MTK_SPEAKER is not set
+< CONFIG_MTK_SOUND=y
+< #CONFIG_MTK_NXP_TFA9890 is not set
+< # lenovo-sw zhouwl,2014-10-11,add smartpa,end
+---
+> # CONFIG_MT_SND_SOC_V2 is not set
+> CONFIG_MT_SND_SOC_V3=y
+> CONFIG_MTK_SPEAKER=y
+> # CONFIG_MTK_NXP_TFA9890 is not set
+2125,2127d2060
+< # lenovo-sw,lily8,2014-11-27,add for piezo,begin
+< CONFIG_LENOVO_PIEZO=y
+< # lenovo-sw,lily8,2014-11-27,add for piezo,end
+2327d2259
+< # CONFIG_USB_GPIO_VBUS is not set
+2405d2336
+< # CONFIG_LEDS_GPIO is not set
+2412a2344
+> # CONFIG_LEDS_REGULATOR is not set
+2414,2415d2345
+< # CONFIG_LEDS_LT3593 is not set
+< # CONFIG_LEDS_RENESAS_TPU is not set
+2430d2359
+< # CONFIG_LEDS_TRIGGER_GPIO is not set
+2439d2367
+< # CONFIG_SWITCH_GPIO is not set
+2555d2482
+< # CONFIG_TOUCHSCREEN_CLEARPAD_TM1217 is not set
+2567d2493
+< # CONFIG_ANDROID_TIMED_GPIO is not set
+2574c2500
+< # CONFIG_MTK_LCA_RAM_OPTIMIZE is not set
+---
+> # CONFIG_MTK_GMO_RAM_OPTIMIZE is not set
+2889c2815
+< # CONFIG_DYNAMIC_DEBUG is not set
+---
+> CONFIG_DYNAMIC_DEBUG=y
+2947c2873
+< # CONFIG_CRYPTO_NULL is not set
+---
+> CONFIG_CRYPTO_NULL=y
+3087,3096c3013,3016
+< CONFIG_GATOR_DRIVER=y
+< CONFIG_HW_PERF_EVENTS=y
+< #lenovo renxm1 add for HALL 2014-11-16
+< CONFIG_LENOVO_HALL=y
+< #lenovo wuwl10 disable SLOPE
+< #CONFIG_LENOVO_BACKLIGHT_SLOPE is not set
+< #lenovo jixu add DRIVER_IC_COMPATIBLE
+< #CONFIG_LENOVO_DRIVER_IC_COMPATIBLE is not set
+< #lenovo jixu add CUSTOM_LCM_FEATURE
+< CONFIG_LENOVO_CUSTOM_LCM_FEATURE=y
+---
+> # CONFIG_MTK_OTG_OC_DETECTOR is not set
+> CONFIG_MTK_SCHED_TRACERS=y
+> #add by liuwenbo@yulong.com for 8676 projects
+> CONFIG_YULONG_BQ24296_SUPPORT=y

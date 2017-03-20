@@ -1,0 +1,36 @@
+[Config]
+Compilator.SaveAll=0
+Compilator.Capture=0
+Compilator.HideOutput=0
+Compilator.LogType=0
+DefaultDir=C:\syna_mli\Release\synaptics_mtk_v5.5
+DefaultCPIndex=0
+LogtoEnd=1
+DontOpen=0
+AbsolutePath=0
+FileFormat=0
+ProjectFilesOnly=0
+Extensions=*.*
+[Project tree]
+synaptics_mtk_v5.5
+	+synaptics_mtk_v5.5
+		Release_Note.txt
+		synaptics_dsx.h
+		synaptics_dsx_fw_update.c
+		synaptics_dsx_i2c.c
+		synaptics_dsx_i2c.h
+		synaptics_dsx_rmi_dev.c
+		synaptics_dsx_test_reporting.c
+		tpd_custom_synaptics.h
+[Open project files]
+0=synaptics_dsx_fw_update.c
+1=synaptics_dsx_i2c.c
+[Selected Project Files]
+Main=
+Selected=synaptics_dsx_i2c.c
+[synaptics_dsx_fw_update.c]
+TopLine=3247
+Caret=26,3274
+[synaptics_dsx_i2c.c]
+TopLine=3155
+Caret=55,3171

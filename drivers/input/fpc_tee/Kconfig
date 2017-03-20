@@ -1,0 +1,6 @@
+config FINGERPRINT_FPC_TEE_FUNCTION
+     default y
+     tristate "FPC 1020 family fingerprint sensor support"	
+     depends on SPI_MASTER
+
+
