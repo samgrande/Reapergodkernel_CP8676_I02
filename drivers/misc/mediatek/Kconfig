@@ -448,6 +448,11 @@ config MTK_TC7_FEATURE
 config MTK_TC1_FM_AT_SUSPEND
 	bool "MTK_TC1_FM_AT_SUSPEND"
 	default n
+config MTK_WIFI_PM_CONTROL
+       tristate "Mediatek Wi-Fi PM Control"
+       default n
+       help
+       Interface to control Wi-Fi Power Saver Modes
 
 source "drivers/misc/mediatek/Kconfig.kernel"
 source "drivers/misc/mediatek/Kconfig.drivers"

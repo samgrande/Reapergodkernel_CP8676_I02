@@ -27,7 +27,7 @@
 #define USB_CHARGER_CURRENT_UNCONFIGURED	CHARGE_CURRENT_70_00_MA	// 70mA
 #define USB_CHARGER_CURRENT_CONFIGURED		CHARGE_CURRENT_500_00_MA	// 500mA
 
-#define USB_CHARGER_CURRENT                 CHARGE_CURRENT_500_00_MA    //500mA
+#define USB_CHARGER_CURRENT                 CHARGE_CURRENT_1000_00_MA    //500mA
 //#define AC_CHARGER_CURRENT                CHARGE_CURRENT_650_00_MA
 
 //modify by liuwenbo@yulong.com 2015.04.17 to improve charge current

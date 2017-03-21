@@ -97,9 +97,9 @@ static int wm8350_charger_config(struct wm8350 *wm8350,
 		return -EINVAL;
 	}
 
-	/* make sure USB fast charge current is not > 500mA */
-	if (policy->fast_limit_USB_mA > 500) {
-		dev_err(wm8350->dev, "USB fast charge > 500mA\n");
+	/* make sure USB fast charge current is not > 1000mA */
+	if (policy->fast_limit_USB_mA > 1000) {
+		dev_err(wm8350->dev, "USB fast charge > 1000mA\n");
 		return -EINVAL;
 	}
 

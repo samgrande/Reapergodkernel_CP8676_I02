@@ -33,7 +33,6 @@
 #include <linux/earlysuspend.h>
 #include <asm/cputime.h>
 #include <linux/suspend.h>
-#include <linux/module.h>
 
 
 #define cputime64_sub(__a, __b)		((__a) - (__b))
@@ -49,7 +48,6 @@
 #define LOGD(fmt...) printk(KERN_DEBUG "[lulzactive] " fmt)
 
 static void (*pm_idle_old)(void);
-void (*pm_idle)(void);
 static atomic_t active_count = ATOMIC_INIT(0);
 
 struct cpufreq_lulzactive_cpuinfo {
@@ -999,8 +997,7 @@ static int cpufreq_governor_lulzactive(struct cpufreq_policy *new_policy,
             if (rc)
                 return rc;
             
-            pm_idle_old = pm_idle;
-            pm_idle = cpufreq_lulzactive_idle;
+           pm_idle_old = cpufreq_lulzactive_idle;
             break;
             
         case CPUFREQ_GOV_STOP:
@@ -1015,7 +1012,6 @@ static int cpufreq_governor_lulzactive(struct cpufreq_policy *new_policy,
             sysfs_remove_group(cpufreq_global_kobject,
                                &lulzactive_attr_group);
             
-            pm_idle = pm_idle_old;
             del_timer(&pcpu->cpu_timer);
             break;
             
