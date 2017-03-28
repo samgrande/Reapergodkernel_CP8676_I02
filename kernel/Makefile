@@ -124,8 +124,6 @@ targets += config_data.h
 $(obj)/config_data.h: $(obj)/config_data.gz FORCE
 	$(call filechk,ikconfiggz)
 
-$(obj)/time.o: $(obj)/timeconst.h
-
 quiet_cmd_hzfile = HZFILE  $@
       cmd_hzfile = echo "hz=$(CONFIG_HZ)" > $@
 
@@ -135,10 +133,6 @@ $(obj)/hz.bc: $(objtree)/include/config/hz.h FORCE
 
 quiet_cmd_bc  = BC      $@
       cmd_bc  = bc -q $(filter-out FORCE,$^) > $@
-
-targets += timeconst.h
-$(obj)/timeconst.h: $(obj)/hz.bc $(src)/timeconst.bc FORCE
-	$(call if_changed,bc)
 
 ifeq ($(CONFIG_MODULE_SIG),y)
 #
